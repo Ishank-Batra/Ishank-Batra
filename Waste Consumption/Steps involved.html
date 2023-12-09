@@ -1,0 +1,296 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WasteConsumption</title>
+  <style>
+    body {
+      font-family:  Bahnschrift SemiBold, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #304F30;
+      color: floralwhite;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      font-family: Franklin Gothic Heavy, sans-serif;
+      background-color: #282827;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff6e9;
+    }
+    
+    .menu-toggle {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 999;
+      color: #fff6e9;
+      cursor: pointer;
+    }
+    
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin-bottom: 5px;
+      background-color: #fff6e9;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .menu-toggle span:first-child {
+      transform-origin: top left;
+    }
+    
+    .menu-toggle span:last-child {
+      transform-origin: bottom left;
+    }
+    
+    #menu-checkbox {
+      display: none;
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+    
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    #menu-checkbox:checked ~ .menu {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .menu ul li {
+      margin-bottom: 20px;
+    }
+    
+    .menu ul li a {
+      color: #fff6e9;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    
+    main {
+      max-width: 1280px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
+    }
+    
+    #gif-container {
+      margin-bottom: 100px;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    #gif-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+    
+    #video-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff6e9;
+    }
+    
+    #video-overlay h2 {
+      font-size: 48px;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    #video-overlay p {
+      font-size: 24px;
+      margin: 0;
+      padding: 10px;
+    }
+      
+    
+      
+      #Our-Project {
+       margin: 0;
+       font-size: 50px;
+       font-weight: bold;
+       color: #fff6e9;
+       text-align: center;
+       margin-bottom: 100px;
+       margin-top: 100px;
+          
+      }
+          
+     #Our-Project p {
+       margin: 0;
+       font-size: 20px;
+       font-weight: bold;
+       color: #fff6e9;
+       text-align: center;
+         
+          
+      }
+    
+    footer {
+      margin-top: 100px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #191918;
+      padding: 20px;
+      text-align: center;
+      color: floralwhite;
+      z-index: 999;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Waste Consumption</h1>
+    <label for="menu-checkbox" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+  
+  <input type="checkbox" id="menu-checkbox">
+  
+  <div class="menu">
+    <ul>
+      <li><a href="Home%202.html">Home</a></li>
+        <li><a href="Info.html">Info</a></li>
+        <li><a href="More%20Information.html">More Information</a></li>
+      <li><a href="creditss.html">Credits</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+  
+  <main>
+    <div id="gif-container">
+      <img src="animation.gif" alt="Waste Consumption Animation">
+      <div id="video-overlay">
+        <h2>Steps Involved</h2>
+      </div>
+    </div>
+    <div class="content">
+        <div class="section">
+            <img src="import.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+            <h2 class="h">Import media</h2>
+            <ol type="1">
+                <li><p class="p1"> Launch Windows Movie Maker and click on the "Add videos and photos" or a similar button to import the media files (videos, photos, audio) you want to include in your video. You can select multiple files at once by holding down the Ctrl key while selecting them.</p></li>
+            </ol>
+        </div>
+        <div class="section">
+            <img src="arrange.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+            <h2 class="h">Arrange media</h2>
+            <ol type="1">
+                <li><p class="p1">After importing the files, you'll see them in the storyboard or timeline view. Drag and drop the files onto the timeline in the desired order to arrange them sequentially.</p></li>
+            </ol>
+        </div>
+        <img src="trim%201.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+        <img src="trim%202.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+        <img src="trim%203.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+        <img src="trim%204.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+        <h2 class="h">Trim and split clips</h2>
+      <ol type="1">
+                <li><p class="p1">To trim or split a video clip, select it on the timeline and use the "Trim tool" or right-click and choose the respective option. Trim allows you to remove unwanted portions from the beginning or end of a clip, while Split divides a clip into two separate parts.</p></li>
+            </ol>
+    </div>
+      <div class="section">
+          <img src="effect%202.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+                    <img src="effect%203.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+            <h2 class="h">Add transitions</h2>
+            <ol type="1">
+                <li><p class="p1">Transitions are effects that help smooth the visual flow between clips. Click on the "Animations" or a similar button and select a transition from the provided options. Drag and drop the transition between two clips on the timeline to apply it.</p></li>
+            </ol>
+        </div>
+      <div class="section">
+          <img src="effect%202.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+                    <img src="effect%203.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+            <h2 class="h">Apply effects and filters</h2>
+            <ol type="1">
+                <li><p class="p1">If you want to add visual effects or filters to a specific clip, select it on the timeline and click on the "Visual Effects" or a similar button. Choose an effect or filter from the available options and apply it.</p></li>
+            </ol>
+        </div>
+      <div class="section">
+            <h2 class="h">Insert titles and captions</h2>
+            <ol type="1">
+                <li><p class="p1">To add text overlays, click on the "Title" or a similar button. Choose a title style and customize the text according to your preference. Drag and drop the title to the desired position on the timeline.</p></li>
+            </ol>
+        </div>
+      <div class="section">
+            <h2 class="h">Include music or audio</h2>
+            <ol type="1">
+                <li><p class="p1">If you want to add background music or any other audio, click on the "Add music" or a similar button. Select an audio file from your computer and adjust its volume level using the provided controls.</p></li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2 class="h">Edit audio</h2>
+            <ol type="1">
+                <li><p class="p1">To make adjustments to the audio of a video clip, select it on the timeline, click on the "Edit" or a similar button, and adjust the volume or apply audio effects as desired.</p></li>
+            </ol>
+        </div>
+       <div class="section">
+            <h2 class="h">Preview and finalize</h2>
+            <ol type="1">
+                <li><p class="p1">Once you've finished editing, click on the "Play" button to preview your video. If everything looks good, go to the "File" menu and select "Save project" to save your work. After that, click on "File" again and choose "Save movie" or "Export video" to save the final video file in the desired format and location.</p></li>
+            </ol>
+        </div>
+  </main>
+  
+  <footer>
+    &copy; @2023-24 All Rights Reserved by, Team B and members of the team, New Delhi
+  </footer>
+</body>
+</html>

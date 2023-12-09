@@ -1,0 +1,299 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WasteConsumption</title>
+  <style>
+      * {
+  box-sizing: border-box;
+}
+nav {
+  float: left;
+  width: 30%;
+  height: 300px;
+  background: #ccc;
+  padding: 20px;
+    background-color: #304F30;
+    color: #161514;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+      .g1{ 
+      color: #304F30;
+          font-family: Bahnschrift SemiBold, sans-serif;
+          font-size: 25;
+      }
+      
+    body {
+      font-family:  Bahnschrift SemiBold, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #304F30;
+      color: #161514;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      font-family: Franklin Gothic Heavy, sans-serif;
+      background-color: #282827;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff6e9;
+    }
+    
+    .menu-toggle {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 999;
+      color: #fff6e9;
+      cursor: pointer;
+    }
+    
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin-bottom: 5px;
+      background-color: #fff6e9;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .menu-toggle span:first-child {
+      transform-origin: top left;
+    }
+    
+    .menu-toggle span:last-child {
+      transform-origin: bottom left;
+    }
+    
+    #menu-checkbox {
+      display: none;
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+    
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    #menu-checkbox:checked ~ .menu {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .menu ul li {
+      margin-bottom: 20px;
+    }
+    
+    .menu ul li a {
+      color: #fff6e9;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    
+    main {
+      max-width: 1280px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
+    }
+    
+    #gif-container {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    #gif-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+    
+    #video-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff6e9;
+    }
+    
+    #video-overlay h2 {
+      font-size: 48px;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    #video-overlay p {
+      font-size: 24px;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #191918;
+      padding: 20px;
+      text-align: center;
+      color: floralwhite;
+      z-index: 999;
+    }
+
+    
+    #feedback {
+      max-width: 1200px;
+        height: 500px;
+      margin: 40px auto;
+      margin-bottom: 100px;
+      padding: 20px;
+      background-color: #161514;
+      color: #fff6e9;
+      text-align: center;
+    }
+    
+    #feedback textarea {
+      width: 100%;
+      height: 100px;
+      resize: none;
+      margin-bottom: 10px;
+    }
+    
+    #feedback input[type="submit"] {
+      background-color: #b85c3c;
+      color: #fff6e9;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    
+    #feedback input[type="submit"]:hover {
+      background-color: #fff6e9;
+      color: #b85c3c;
+    }
+  </style>
+</head>
+    <body alink="white" vlink="yellow" link="lightpink">
+  <header>
+    <h1>Waste Consumption</h1>
+    <label for="menu-checkbox" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+  
+  <input type="checkbox" id="menu-checkbox">
+  
+  <div class="menu">
+    <ul>
+        <li><a href="Home%202.html">Home</a></li>
+        <li><a href="Steps%20involved.html">Steps invovled</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="More%20Information.html">More Information</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+  
+  <main>
+    <div id="gif-container">
+      <img src="animation.gif" alt="Waste Consumption Animation">
+      <div id="video-overlay">
+        <h2>Reduce, Recycle & Reuse</h2>
+        <p>Only by adopting more sustainable alternatives can we reduce the negative impact of waste on our planet and build a greener future.</p>
+      </div>
+    </div>
+    
+    <div id="feedback">
+      <h2>Credits</h2>
+        <section>
+  <nav>
+    <ul>
+      <li><a href="Victor.html">Victor</a></li>
+      <li><a href="Priyanshu.html">Priyanshu</a></li>
+      <li><a href="Ishank.html">Ishank</a></li>
+        <li><a href="Siddharth.html">Siddhart</a></li>
+        <li><a href="Saahir.html">Saahir</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+  <img src="photo%2010.jpg" hight="200" width="200" align=left>
+      <p class=g1>Saahir 
+A representative from team B. I appreciate his efforts for the work he puts in as he believes in hard work</p>
+  </article>
+</section>
+    </div>
+  </main>
+  
+  <footer>
+    &copy; @2023-24 All Rights Reserved by, Team B and members of the team, New Delhi
+  </footer>
+</body>
+</html>

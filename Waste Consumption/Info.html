@@ -1,0 +1,263 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WasteConsumption</title>
+  <style>
+    body {
+      font-family:  Bahnschrift SemiBold, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #304F30;
+      color: floralwhite;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      font-family: Franklin Gothic Heavy, sans-serif;
+      background-color: #282827;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff6e9;
+    }
+    
+    .menu-toggle {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 999;
+      color: #fff6e9;
+      cursor: pointer;
+    }
+    
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin-bottom: 5px;
+      background-color: #fff6e9;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .menu-toggle span:first-child {
+      transform-origin: top left;
+    }
+    
+    .menu-toggle span:last-child {
+      transform-origin: bottom left;
+    }
+    
+    #menu-checkbox {
+      display: none;
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+    
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    #menu-checkbox:checked ~ .menu {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .menu ul li {
+      margin-bottom: 20px;
+    }
+    
+    .menu ul li a {
+      color: #fff6e9;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    
+    main {
+      max-width: 1280px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
+    }
+    
+    #gif-container {
+      margin-bottom: 100px;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    #gif-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+    
+    #video-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff6e9;
+    }
+    
+    #video-overlay h2 {
+      font-size: 48px;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    #video-overlay p {
+      font-size: 24px;
+      margin: 0;
+      padding: 10px;
+    }
+      
+    
+      
+      #Our-Project {
+       margin: 0;
+       font-size: 50px;
+       font-weight: bold;
+       color: #fff6e9;
+       text-align: center;
+       margin-bottom: 100px;
+       margin-top: 100px;
+          
+      }
+          
+     #Our-Project p {
+       margin: 0;
+       font-size: 20px;
+       font-weight: bold;
+       color: #fff6e9;
+       text-align: center;
+         
+          
+      }
+    
+    footer {
+      margin-top: 100px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #191918;
+      padding: 20px;
+      text-align: center;
+      color: floralwhite;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Waste Consumption</h1>
+    <label for="menu-checkbox" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+  
+  <input type="checkbox" id="menu-checkbox">
+  
+  <div class="menu">
+    <ul>
+      <li><a href="Home%202.html">Home</a></li>
+        <li><a href="Steps%20involved.html">Steps invovled</a></li>
+        <li><a href="More%20Information.html">More Information</a></li>
+      <li><a href="creditss.html">Credits</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+  
+  <main>
+    <div id="gif-container">
+      <img src="animation.gif" alt="Waste Consumption Animation">
+      <div id="video-overlay">
+        <h2>Facts</h2>
+      </div>
+    </div>
+    <div class="content">
+        <div class="section">
+<img src="photo1.jpeg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+            <h3 class="h">CONSUMPTION</h3>
+            <ol type="1">
+                <li><p class="p1">India is the second most populous country in the world, and a growing population has increased consumption patterns over the years. Rapid urbanization, a growing middle class and economic growth are increasing demand for consumer goods, energy and resources.</p></li>
+                <li><p class="p1">Indian consumption patterns vary across sectors such as food, energy, transportation and housing. The agricultural sector is one of the largest consumers of water and energy due to the irrigation needs of crops. The industrial sector, especially manufacturing and construction, also contributes significantly to the country's overall consumption.</p></li>
+            </ol>
+        </div>
+<img src="photo%202.jpg" height="300" width="600" style="display: inherit; margin: 0 auto;">
+        <div class="section">
+            <h3 class="h">WASTE</h3>
+            <ol type="1">
+                <li><p class="p1">India faces major challenges in waste management due to its large population and limited waste management infrastructure. The country generates large amounts of municipal waste every day, including organic and inorganic waste.</p></li>
+                <li><p class="p1">Municipal solid waste management in India is a complex issue, with many urban areas facing challenges such as inadequate collection systems, inadequate treatment facilities and lack of awareness and implementation of proper waste segregation practices. increase. As a result, a significant portion of waste ends up in open landfills and uncontrolled landfills, posing environmental and health hazards.</p></li>
+                <li><p class="p1">The Indian government and various organizations have made efforts to improve waste management practices. Initiatives such as the Swachh Bharat Mission aim to promote cleanliness and good waste management practices nationwide. Additionally, there is an increasing focus on waste segregation, recycling and promotion of sustainable waste management techniques.</p></li>
+                <li><p class="p1">It is important to note that specific details and statistics regarding Indian consumption and waste may change over time. To access the most up-to-date and comprehensive information, we encourage you to consult the latest reports and research from trusted sources, government agencies and research institutes specializing in waste management and sustainability in India. increase. </p></li>
+            </ol>
+            <EMBED SRC="Movie.mp4" Height=600 width=1200></EMBED>
+        </div>
+        <h2 class="h">CONSUMPTIONS AND WASTE FACTS</h2>
+        <ul>
+            <li><p1 class="p1">India is the second most populous country in the world, with over 1.3 billion people.</p1></li>
+            <li><p2 class="p1">The rising middle class and urbanization have led to increased consumption patterns in the country.</p2></li>
+            <li><p3 class="p1">India generates a significant amount of waste. According to the Central Pollution Control Board (CPCB), the country produces around 62 million tonnes of solid waste annually.</p3></li>
+            <li><p4 class="p1">Plastic waste is a significant environmental concern in India. The country generates approximately 26,000 tonnes of plastic waste every day.</p4></li>
+            <li><p5 class="p1">India is one of the largest generators of electronic waste (e-waste) globally. It produces approximately 2 million tonnes of e-waste annually.</p5></li>
+            <li><p6 class="p1">Recycling rates in India vary across different waste streams. While there are formal recycling systems for certain materials like paper, metal, and glass, the recycling of plastic and e-waste faces challenges.</p6></li>
+        </ul>
+    </div>
+
+      
+      
+    
+  </main>
+  
+  <footer>
+    &copy; @2023-24 All Rights Reserved by, Team B and members of the team, New Delhi
+  </footer>
+</body>
+</html>
